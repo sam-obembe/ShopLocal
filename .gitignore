@@ -1,2 +1,5 @@
 shoplocal-admin-firebase.json
 appsettings.Development.json
+bin/
+.vscode
+.vs
