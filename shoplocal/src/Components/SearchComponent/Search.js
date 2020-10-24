@@ -22,9 +22,6 @@ const Search = (props) =>{
       submit(e);
       setSearchValue("");
     }
-    else{
-      setSearchValue(e.target.value);
-    }
   }
 
   let submit =(e)=>{
@@ -60,7 +57,7 @@ const Search = (props) =>{
             defaultValue={5}
             custom
            
-            onChange={ (e)=> setDistance(e.target.value) }
+            onChange={ (e)=> setDistance(+e.target.value) }
           />
            <span style={{marginLeft:"5%"}}>{distance}</span>
         </Form.Group>

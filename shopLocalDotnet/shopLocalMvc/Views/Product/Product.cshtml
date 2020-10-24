@@ -1,0 +1,16 @@
+
+@model shopLocalCommonModels.ItemModel
+
+@{
+    ViewData["Title"] = "Product";
+}
+
+<h1>Product Details</h1>
+<div class="jumbotron">
+    <h2 class="display-4">@Model.Name</h2>
+    <p class="lead">@Model.Description</p>
+    <hr class="my-4">
+    <p>Price : @Model.Price</p>
+    <p>Quantity : @Model.Quantity</p>
+    <a class="btn btn-primary btn-lg" href="#" role="button">Edit</a>
+</div>
