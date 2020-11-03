@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
-using shopLocalApi.Data.Entities;
+//using shopLocalApi.Data.Entities;
+using shopLocalCommonModels.DbEntities;
 
 namespace shopLocalApi.Data
 {

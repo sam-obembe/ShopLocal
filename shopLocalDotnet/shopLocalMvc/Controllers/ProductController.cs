@@ -5,7 +5,7 @@ using Microsoft.Extensions.Configuration;
 using System;
 using System.Threading.Tasks;
 using System.Text.Json;
-using shopLocalDataAccess.Entities;
+//using shopLocalDataAccess.Entities;
 using shopLocalCommonModels;
 using Microsoft.AspNetCore.Authorization;
 using shopLocalMvc.utils;
@@ -13,14 +13,14 @@ using shopLocalMvc.utils;
 namespace shopLocalMvc.Controllers
 {
     [AllowAnonymous]
-    public class ProductController:Controller
+    public class ProductController : Controller
     {
         private readonly ILogger _logger;
         private readonly IConfiguration configuration;
         private string Api;
         private HttpClient client;
 
-        public ProductController(ILogger<ProductController> logger, IConfiguration _configuration )
+        public ProductController(ILogger<ProductController> logger, IConfiguration _configuration)
         {
             _logger = logger;
             configuration = _configuration;
@@ -41,8 +41,8 @@ namespace shopLocalMvc.Controllers
             var endPoint = new UriBuilder(Api);
             endPoint.Path = route;
 
-            ItemModel item = (await MvcHttpClient<ItemModel,dynamic>.GetAsync(endPoint.Uri)).Value;
-            if(item != null)
+            ItemModel item = (await MvcHttpClient<ItemModel, dynamic>.GetAsync(endPoint.Uri)).Value;
+            if (item != null)
             {
                 return View(item);
             }
@@ -53,7 +53,7 @@ namespace shopLocalMvc.Controllers
         }
 
         public IActionResult UpdateProduct()
-        { 
+        {
             return View();
         }
 

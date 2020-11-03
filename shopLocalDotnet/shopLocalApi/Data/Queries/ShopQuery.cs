@@ -1,5 +1,6 @@
-﻿using shopLocalApi.Data.Entities;
+﻿//using shopLocalApi.Data.Entities;
 using shopLocalCommonModels;
+using shopLocalCommonModels.DbEntities;
 using System;
 using System.Collections.Generic;
 using System.Linq;

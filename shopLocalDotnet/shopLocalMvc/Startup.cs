@@ -17,7 +17,7 @@ using shopLocalMvc.utils;
 using shopLocalMvc.Authorization;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Authorization;
-using shopLocalDataAccess;
+//using shopLocalDataAccess;
 
 namespace shopLocalMvc
 {

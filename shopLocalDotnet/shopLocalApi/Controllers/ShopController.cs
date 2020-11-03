@@ -4,7 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using shopLocalApi.Data.Entities;
+//using shopLocalApi.Data.Entities;
+using shopLocalCommonModels.DbEntities;
 using shopLocalApi.Data.Queries;
 using shopLocalCommonModels;
 

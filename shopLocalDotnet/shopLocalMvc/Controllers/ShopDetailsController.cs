@@ -9,7 +9,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using shopLocalCommonModels;
-using shopLocalDataAccess.Entities;
+using shopLocalCommonModels.DbEntities;
+//using shopLocalDataAccess.Entities;
 using shopLocalMvc.utils;
 
 namespace shopLocalMvc.Controllers
@@ -39,7 +40,7 @@ namespace shopLocalMvc.Controllers
             UriBuilder endPoint = new UriBuilder(Api);
             endPoint.Path = route;
 
-            ShopModel shopModel = (await MvcHttpClient<ShopModel,dynamic>.GetAsync(endPoint.Uri)).Value;
+            ShopModel shopModel = (await MvcHttpClient<ShopModel, dynamic>.GetAsync(endPoint.Uri)).Value;
             if (shopModel != null)
             {
                 return View(shopModel);
@@ -56,8 +57,8 @@ namespace shopLocalMvc.Controllers
             UriBuilder endPoint = new UriBuilder(Api);
             endPoint.Path = route;
 
-            ShopModel shopModel= (await MvcHttpClient<ShopModel,dynamic>.GetAsync(endPoint.Uri)).Value;
-            if(shopModel != null)
+            ShopModel shopModel = (await MvcHttpClient<ShopModel, dynamic>.GetAsync(endPoint.Uri)).Value;
+            if (shopModel != null)
             {
                 return View(shopModel);
             }
@@ -73,7 +74,7 @@ namespace shopLocalMvc.Controllers
             UriBuilder endPoint = new UriBuilder(Api);
             endPoint.Path = route;
 
-            ShopModel shopModel = (await MvcHttpClient<ShopModel,dynamic>.GetAsync(endPoint.Uri)).Value;
+            ShopModel shopModel = (await MvcHttpClient<ShopModel, dynamic>.GetAsync(endPoint.Uri)).Value;
             return View(shopModel);
         }
 
@@ -99,13 +100,13 @@ namespace shopLocalMvc.Controllers
                     Latitude = edited.Latitude,
                     Longitude = edited.Longitude
                 };
-                return RedirectToAction("Shop",id);
+                return RedirectToAction("Shop", id);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return BadRequest(ex);
             }
-           
+
         }
     }
 }
