@@ -41,12 +41,12 @@ namespace shopLocalApi.Data.Queries
 
         public IEnumerable<ItemEntity> GetShopItems(int shopId)
         {
-            using (var db = new ShopLocalContext())
+            using (context)
             {
                 try
                 {
                     List<ItemEntity> items =
-                        db.Items.Where<ItemEntity>(item => item.ShopId == shopId)
+                        context.Items.Where(item => item.ShopId == shopId)
                         .AsEnumerable().ToList();
                     return items;
 
@@ -61,12 +61,12 @@ namespace shopLocalApi.Data.Queries
 
         public ItemEntity AddStoreItem(ItemEntity item)
         {
-            using (var db = new ShopLocalContext())
+            using (context)
             {
                 try
                 {
-                    db.Items.Add(item);
-                    db.SaveChanges();
+                    context.Items.Add(item);
+                    context.SaveChanges();
                     return item;
                 }
                 catch
@@ -79,11 +79,11 @@ namespace shopLocalApi.Data.Queries
 
         public ShopEntity EditShopDetails(int shopId, ShopModel shop)
         {
-            using (var db = new ShopLocalContext())
+            using (context)
             {
                 try
                 {
-                    var existingShop = db.Shops.Single(s => s.Id == shopId);
+                    var existingShop = context.Shops.Single(s => s.Id == shopId);
                     existingShop.Email = shop.Email;
                     existingShop.StreetAddress = shop.StreetAddress;
                     existingShop.City = shop.City;
@@ -93,7 +93,7 @@ namespace shopLocalApi.Data.Queries
                     existingShop.Latitude = shop.Latitude;
                     existingShop.Longitude = shop.Longitude;
 
-                    db.SaveChanges();
+                    context.SaveChanges();
 
                     return existingShop;
 

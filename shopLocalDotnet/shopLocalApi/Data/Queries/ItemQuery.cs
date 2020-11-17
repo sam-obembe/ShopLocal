@@ -12,6 +12,7 @@ namespace shopLocalApi.Data.Queries
     public class ItemQuery
     {
         private ShopLocalContext context;
+
         public ItemQuery(ShopLocalContext _context)
         {
             context = _context;
@@ -38,11 +39,11 @@ namespace shopLocalApi.Data.Queries
 
         public IEnumerable<ItemEntity> GetItemsByName(string name)
         {
-            using (var db = new ShopLocalContext())
+            using (context)
             {
                 try
                 {
-                    var items = db.Items.Where(item => item.Name.Contains(name));
+                    var items = context.Items.Where(item => item.Name.Contains(name));
                     return items.AsEnumerable();
                 }
                 catch (Exception ex)

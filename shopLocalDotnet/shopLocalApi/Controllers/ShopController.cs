@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using shopLocalCommonModels.DbEntities;
 using shopLocalApi.Data.Queries;
 using shopLocalCommonModels;
+using shopLocalApi.Data;
 
 namespace shopLocalApiV2.Controllers
 {
@@ -16,9 +17,9 @@ namespace shopLocalApiV2.Controllers
     public class ShopController : ControllerBase
     {
         ShopQuery shopQuery;
-        public ShopController(ShopQuery _shopQuery)
+        public ShopController(ShopLocalContext context)
         {
-            shopQuery = _shopQuery;
+            shopQuery = new ShopQuery(context);
         }
 
         [HttpGet("{shopId}")]

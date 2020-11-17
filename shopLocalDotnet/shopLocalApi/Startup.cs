@@ -32,8 +32,8 @@ namespace shopLocalApiV2
         {
             services.AddControllers();
             services.AddDbContext<ShopLocalContext>(options => options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
-            services.AddSingleton<ItemQuery>();
-            services.AddSingleton<ShopQuery>();
+            //services.AddSingleton<ItemQuery>();
+            //services.AddSingleton<ShopQuery>();
 
         }
 

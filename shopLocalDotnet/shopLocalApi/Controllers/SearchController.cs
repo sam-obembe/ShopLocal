@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using shopLocalApi.Data;
 using shopLocalApi.Data.Entities;
 using shopLocalApi.Data.Queries;
 using shopLocalCommonModels;
@@ -15,9 +16,9 @@ namespace shopLocalApiV2.Controllers
     public class SearchController : ControllerBase
     {
         ItemQuery itemQuery;
-        public SearchController(ItemQuery _itemQuery)
+        public SearchController(ShopLocalContext context)
         {
-            itemQuery = _itemQuery;
+            itemQuery = new ItemQuery(context);
         }
 
         [HttpGet("GetItem/{itemId}")]

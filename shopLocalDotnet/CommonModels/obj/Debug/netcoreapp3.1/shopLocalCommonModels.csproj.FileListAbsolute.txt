@@ -1,9 +1,0 @@
-C:\Users\Samuel Obembe\PROJECTS\ShopLocal\shopLocalDotnet\CommonModels\bin\Debug\netcoreapp3.1\shopLocalCommonModels.deps.json
-C:\Users\Samuel Obembe\PROJECTS\ShopLocal\shopLocalDotnet\CommonModels\bin\Debug\netcoreapp3.1\shopLocalCommonModels.dll
-C:\Users\Samuel Obembe\PROJECTS\ShopLocal\shopLocalDotnet\CommonModels\bin\Debug\netcoreapp3.1\shopLocalCommonModels.pdb
-C:\Users\Samuel Obembe\PROJECTS\ShopLocal\shopLocalDotnet\CommonModels\obj\Debug\netcoreapp3.1\shopLocalCommonModels.csprojAssemblyReference.cache
-C:\Users\Samuel Obembe\PROJECTS\ShopLocal\shopLocalDotnet\CommonModels\obj\Debug\netcoreapp3.1\shopLocalCommonModels.AssemblyInfoInputs.cache
-C:\Users\Samuel Obembe\PROJECTS\ShopLocal\shopLocalDotnet\CommonModels\obj\Debug\netcoreapp3.1\shopLocalCommonModels.AssemblyInfo.cs
-C:\Users\Samuel Obembe\PROJECTS\ShopLocal\shopLocalDotnet\CommonModels\obj\Debug\netcoreapp3.1\shopLocalCommonModels.csproj.CoreCompileInputs.cache
-C:\Users\Samuel Obembe\PROJECTS\ShopLocal\shopLocalDotnet\CommonModels\obj\Debug\netcoreapp3.1\shopLocalCommonModels.dll
-C:\Users\Samuel Obembe\PROJECTS\ShopLocal\shopLocalDotnet\CommonModels\obj\Debug\netcoreapp3.1\shopLocalCommonModels.pdb
