@@ -19,6 +19,7 @@
     "shopLocalApiV2": {
       "commandName": "Project",
       "launchUrl": "",
+      "launchBrowser": false,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },

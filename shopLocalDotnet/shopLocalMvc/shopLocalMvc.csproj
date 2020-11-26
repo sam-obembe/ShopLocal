@@ -28,8 +28,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CommonModels\shopLocalCommonModels.csproj" />
-    <ProjectReference Include="..\shopLocalDataAccess\shopLocalDataAccess.csproj" />
+    <ProjectReference Include="..\shopLocalCommonModels\shopLocalCommonModels.csproj" />
   </ItemGroup>
 
 </Project>

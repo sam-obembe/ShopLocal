@@ -9,6 +9,7 @@ using shopLocalCommonModels.DbEntities;
 using shopLocalApi.Data.Queries;
 using shopLocalCommonModels;
 using shopLocalApi.Data;
+using Microsoft.AspNetCore.Authorization;
 
 namespace shopLocalApiV2.Controllers
 {

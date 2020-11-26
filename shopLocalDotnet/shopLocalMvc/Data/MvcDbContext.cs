@@ -9,9 +9,6 @@ namespace shopLocalMvc.Data
 {
     public class MvcDbContext : IdentityDbContext
     {
-        // public DbSet<ShopEntity> Shops { get; set; }
-        // public DbSet<ItemEntity> Items { get; set; }
-
         public MvcDbContext(DbContextOptions<MvcDbContext> options)
             : base(options)
         {
