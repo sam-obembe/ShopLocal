@@ -9,6 +9,7 @@ using System.Text.Json;
 using shopLocalCommonModels;
 using Microsoft.AspNetCore.Authorization;
 using shopLocalMvc.utils;
+using shopLocalMvc.Models;
 
 namespace shopLocalMvc.Controllers
 {
@@ -42,6 +43,7 @@ namespace shopLocalMvc.Controllers
             endPoint.Path = route;
 
             ItemModel item = (await MvcHttpClient<ItemModel, dynamic>.GetAsync(endPoint.Uri)).Value;
+           
             if (item != null)
             {
                 return View(item);
@@ -52,10 +54,32 @@ namespace shopLocalMvc.Controllers
             }
         }
 
-        public IActionResult UpdateProduct()
+        public async Task<IActionResult> UpdateProduct(int id)
         {
-            return View();
+            ItemModel item = GetProductInformation(id).Result.Value;
+            return View(item);
         }
 
+
+        private async Task<ActionResult<ItemModel>> GetProductInformation(int id)
+        {
+            string route = $"api/Search/GetItem/{id}";
+            var endPoint = new UriBuilder(Api);
+            endPoint.Path = route;
+
+            try
+            {
+                ItemModel item = (await MvcHttpClient<ItemModel, dynamic>.GetAsync(endPoint.Uri)).Value;
+                return item;
+
+            }
+            catch(Exception ex)
+            {
+                return new ItemModel();
+            }
+
+
+
+        }
     }
 }

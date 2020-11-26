@@ -17,9 +17,11 @@ namespace shopLocalApiV2.Controllers
     [ApiController]
     public class ShopController : ControllerBase
     {
-        ShopQuery shopQuery;
-        public ShopController(ShopLocalContext context)
+        private ShopQuery shopQuery;
+        private readonly ShopLocalContext context;
+        public ShopController(ShopLocalContext _context)
         {
+            context = _context;
             shopQuery = new ShopQuery(context);
         }
 
