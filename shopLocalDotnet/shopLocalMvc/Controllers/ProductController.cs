@@ -54,7 +54,7 @@ namespace shopLocalMvc.Controllers
             }
         }
 
-        public async Task<IActionResult> UpdateProduct(int id)
+        public async Task<IActionResult> EditProduct(int id)
         {
             ItemModel item = GetProductInformation(id).Result.Value;
             return View(item);

@@ -1,0 +1,29 @@
+@model shopLocalCommonModels.ItemModel
+@{
+    ViewData["Title"] = "Update Product";
+}
+
+<h1>Edit Product</h1>
+
+
+<form>
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" placeholder="@Model.Name" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Description"></label>
+        <input asp-for="Description" class="form-control" placeholder="@Model.Description" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Price"></label>
+        <input asp-for="Price" class="form-control" placeholder="@Model.Price"/>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Quantity"></label>
+        <input asp-for="Quantity" class="form-control" placeholder="@Model.Quantity"/>
+    </div>
+</form>
