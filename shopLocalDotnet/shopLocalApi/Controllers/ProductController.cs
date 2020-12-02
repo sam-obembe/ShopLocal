@@ -13,10 +13,10 @@ namespace shopLocalApiV2.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class SearchController : ControllerBase
+    public class ProductController : ControllerBase
     {
         ItemQuery itemQuery;
-        public SearchController(ShopLocalContext context)
+        public ProductController(ShopLocalContext context)
         {
             itemQuery = new ItemQuery(context);
         }

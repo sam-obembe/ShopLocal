@@ -38,7 +38,7 @@ namespace shopLocalMvc.Controllers
 
         public async Task<IActionResult> Product(int id)
         {
-            string route = $"api/Search/GetItem/{id}";
+            string route = $"api/Product/GetItem/{id}";
             var endPoint = new UriBuilder(Api);
             endPoint.Path = route;
 
@@ -63,7 +63,7 @@ namespace shopLocalMvc.Controllers
 
         private async Task<ActionResult<ItemModel>> GetProductInformation(int id)
         {
-            string route = $"api/Search/GetItem/{id}";
+            string route = $"api/Product/GetItem/{id}";
             var endPoint = new UriBuilder(Api);
             endPoint.Path = route;
 
